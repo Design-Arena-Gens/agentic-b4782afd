@@ -1,0 +1,33 @@
+html, body, #__next { height: 100%; }
+body { margin: 0; background: #0a0a0a; color: #e5e5e5; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif; }
+main { height: 100dvh; }
+
+/* CCTV overlay styling */
+.cctv-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  color: rgba(240,240,240,0.9);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.8);
+}
+.cctv-overlay .row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 10px;
+}
+.cctv-vignette { 
+  position: fixed; inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 240px rgba(0,0,0,0.9);
+}
+.cctv-noise { 
+  position: fixed; inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 3px 3px;
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.cut-to-black { position: fixed; inset: 0; background: #000; }
